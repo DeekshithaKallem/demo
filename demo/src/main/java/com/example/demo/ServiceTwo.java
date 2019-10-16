@@ -52,8 +52,7 @@ public class ServiceTwo {
 			// and some trickle failure every minute
 			throw new RandomException("Random Failure");
 		}		
-		String result = restTemplate.getForObject(servicethreeUrl + "/api/serviceThree", String.class);
-		return result;
+		return restTemplate.getForObject(servicethreeUrl + "/api/serviceThree", String.class);		
 	}
 
 	private final class RandomException extends RuntimeException {
